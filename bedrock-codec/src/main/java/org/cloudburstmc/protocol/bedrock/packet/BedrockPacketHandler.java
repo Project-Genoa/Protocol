@@ -835,4 +835,100 @@ public interface BedrockPacketHandler extends PacketHandler {
     default PacketSignal handle(SetPlayerInventoryOptionsPacket packet) {
         return PacketSignal.UNHANDLED;
     }
+
+    default PacketSignal handle(GenoaOpenInventoryPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaInventoryDataPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaGuestPlayerJoinResponsePacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaShareAnchorPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaItemPickupPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaSetActorMolangVariablesPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaPersonaMobRequestPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaGuestPlayerJoinRequestPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaNetworkTransformPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaWorldManipulationPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaNetworkOwnershipRequestPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaItemParticlePacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaThirdPersonItemParticlePacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaNetworkOwnershipStatusPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaUpdateBlockPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaBlockDestroyPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaPlayerHurtPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaDisconnectRequestPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaDisconnectStartPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaGameplaySettingsPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaBlockHitNoDamagePacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaItemBrokeNotificationPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaItemAwardedNotificationPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
+    default PacketSignal handle(GenoaEventFlatbufferPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
 }

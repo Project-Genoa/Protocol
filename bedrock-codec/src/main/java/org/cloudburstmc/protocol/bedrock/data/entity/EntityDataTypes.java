@@ -264,4 +264,6 @@ public class EntityDataTypes {
      * @since v594
      */
     public static final EntityDataType<Vector3f> COLLISION_BOX = new EntityDataType<>(Vector3f.class, "COLLISION_BOX");
+
+    public static final EntityDataType<Byte> GENOA_ENTITY_DATA = new EntityDataType<>(Byte.class, "GENOA_ENTITY_DATA");
 }

@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector3i;
+import org.cloudburstmc.math.vector.Vector4f;
 import org.cloudburstmc.nbt.NbtType;
 import org.cloudburstmc.protocol.bedrock.data.ExperimentData;
 import org.cloudburstmc.protocol.bedrock.data.GameRuleData;
@@ -134,6 +135,10 @@ public interface BedrockCodecHelper {
     UUID readUuid(ByteBuf buffer);
 
     void writeUuid(ByteBuf buffer, UUID uuid);
+
+    Vector4f readVector4f(ByteBuf buffer);
+
+    void writeVector4f(ByteBuf buffer, Vector4f vector4f);
 
     Vector3f readVector3f(ByteBuf buffer);
 

@@ -14,6 +14,7 @@ import lombok.Setter;
 import org.cloudburstmc.math.vector.Vector2f;
 import org.cloudburstmc.math.vector.Vector3f;
 import org.cloudburstmc.math.vector.Vector3i;
+import org.cloudburstmc.math.vector.Vector4f;
 import org.cloudburstmc.nbt.NBTInputStream;
 import org.cloudburstmc.nbt.NBTOutputStream;
 import org.cloudburstmc.nbt.NbtType;
@@ -117,6 +118,24 @@ public abstract class BaseBedrockCodecHelper implements BedrockCodecHelper {
         checkNotNull(uuid, "uuid");
         buffer.writeLongLE(uuid.getMostSignificantBits());
         buffer.writeLongLE(uuid.getLeastSignificantBits());
+    }
+
+    public Vector4f readVector4f(ByteBuf buffer) {
+        // TODO: confirm that wxyz is the correct wire order
+        float w = buffer.readFloatLE();
+        float x = buffer.readFloatLE();
+        float y = buffer.readFloatLE();
+        float z = buffer.readFloatLE();
+        return Vector4f.from(x, y, z, w);
+    }
+
+    public void writeVector4f(ByteBuf buffer, Vector4f vector4f) {
+        // TODO: confirm that wxyz is the correct wire order
+        checkNotNull(vector4f, "vector4f");
+        buffer.writeFloatLE(vector4f.getW());
+        buffer.writeFloatLE(vector4f.getX());
+        buffer.writeFloatLE(vector4f.getY());
+        buffer.writeFloatLE(vector4f.getZ());
     }
 
     public Vector3f readVector3f(ByteBuf buffer) {
