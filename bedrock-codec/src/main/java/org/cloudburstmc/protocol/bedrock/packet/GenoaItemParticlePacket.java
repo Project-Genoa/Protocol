@@ -10,10 +10,10 @@ import org.cloudburstmc.protocol.common.PacketSignal;
 @EqualsAndHashCode(doNotUseGetters = true)
 @ToString(doNotUseGetters = true)
 public class GenoaItemParticlePacket implements BedrockPacket {
-    public int particleId;
-    public int dimensionId;
+    public int itemId;
+    public int itemDataValue;
     public Vector3f position;
-    public long uniqueEntityId;
+    public long runtimeEntityId;
 
     @Override
     public final PacketSignal handle(BedrockPacketHandler handler) {

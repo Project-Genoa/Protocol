@@ -14,17 +14,17 @@ public class GenoaItemParticleSerializer_v425_Genoa implements BedrockPacketSeri
 
     @Override
     public void serialize(ByteBuf buffer, BedrockCodecHelper helper, GenoaItemParticlePacket packet) {
-        buffer.writeIntLE(packet.getParticleId());
-        buffer.writeIntLE(packet.getDimensionId());
+        buffer.writeIntLE(packet.getItemId());
+        buffer.writeIntLE(packet.getItemDataValue());
         helper.writeVector3f(buffer, packet.getPosition());
-        VarInts.writeUnsignedLong(buffer, packet.getUniqueEntityId());
+        VarInts.writeUnsignedLong(buffer, packet.getRuntimeEntityId());
     }
 
     @Override
     public void deserialize(ByteBuf buffer, BedrockCodecHelper helper, GenoaItemParticlePacket packet) {
-        packet.setParticleId(buffer.readIntLE());
-        packet.setDimensionId(buffer.readIntLE());
+        packet.setItemId(buffer.readIntLE());
+        packet.setItemDataValue(buffer.readIntLE());
         packet.setPosition(helper.readVector3f(buffer));
-        packet.setUniqueEntityId((VarInts.readUnsignedLong(buffer)));
+        packet.setRuntimeEntityId((VarInts.readUnsignedLong(buffer)));
     }
 }
