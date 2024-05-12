@@ -912,6 +912,10 @@ public interface BedrockPacketHandler extends PacketHandler {
         return PacketSignal.UNHANDLED;
     }
 
+    default PacketSignal handle(GenoaDisconnectIdPacket packet) {
+        return PacketSignal.UNHANDLED;
+    }
+
     default PacketSignal handle(GenoaGameplaySettingsPacket packet) {
         return PacketSignal.UNHANDLED;
     }

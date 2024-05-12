@@ -32,7 +32,7 @@ public class Bedrock_v425_Genoa extends Bedrock_v361 {
             .registerPacket(GenoaItemPickupPacket::new, GenoaItemPickupSerializer_v425_Genoa.INSTANCE, 130)
             .registerPacket(GenoaShareAnchorPacket::new, GenoaShareAnchorSerializer_v425_Genoa.INSTANCE, 131)
             .registerPacket(GenoaWorldManipulationPacket::new, GenoaWorldManipulationSerializer_v425_Genoa.INSTANCE, 132)
-            //.registerPacket(GenoaDisconnectIdPacket::new, GenoaDisconnectIdSerializer_v425_Genoa.INSTANCE, 134) // TODO
+            .registerPacket(GenoaDisconnectIdPacket::new, GenoaDisconnectIdSerializer_v425_Genoa.INSTANCE, 134)
             .registerPacket(GenoaItemParticlePacket::new, GenoaItemParticleSerializer_v425_Genoa.INSTANCE, 135)
             .registerPacket(GenoaThirdPersonItemParticlePacket::new, GenoaThirdPersonItemParticleSerializer_v425_Genoa.INSTANCE, 136)
             .registerPacket(GenoaNetworkTransformPacket::new, GenoaNetworkTransformSerializer_v425_Genoa.INSTANCE, 137)
