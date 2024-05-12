@@ -101,5 +101,21 @@ public enum ParticleType implements LevelEventType {
     /**
      * @since v630
      */
-    WHITE_SMOKE
+    WHITE_SMOKE,
+    /**
+     * @since v649
+     */
+    WIND_EXPLOSION,
+    /**
+     * @since v662
+     */
+    BREEZE_WIND_EXPLOSION,
+    /**
+     * @since v662
+     */
+    VAULT_CONNECTION,
+    /**
+     * @since v671
+     */
+    WOLF_ARMOR_BREAK
 }
